@@ -10,7 +10,19 @@ package pointofsale;
  */
 public class Reciept {
     private LineItem lineItem;
-    private Customer customer;
+    
+
+    public Reciept(LineItem lineItem){
+        
+    }
+
+    public void setLineItem(LineItem lineItem) {
+        this.lineItem = lineItem;
+    }
+
+    public LineItem getLineItem() {
+        return lineItem;
+    }
     
     
 }

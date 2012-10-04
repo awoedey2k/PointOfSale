@@ -10,20 +10,18 @@ package pointofsale;
  */
 public class NoDiscount implements DiscountStrategy {
     private final double RATE = 0.0;
-    private Product product;
+ 
     
-   public NoDiscount(Product product){
-        this.product = product;
-    }
+   
     
-    @Override
-    public double calculateDiscount(){
-        return this.product.getPrice() * this.RATE;
+   @Override
+    public double calculateDiscount(Product product){
+        return product.getPrice() * this.RATE;
         
     }
     
-    public double getDiscountPrice(){
-        return  this.product.getPrice() - this.calculateDiscount();
+    public double getDiscountedPrice(Product product){
+        return product.getPrice() - this.calculateDiscount(product);
     }
     
     

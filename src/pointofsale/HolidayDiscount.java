@@ -10,20 +10,17 @@ package pointofsale;
  */
 public class HolidayDiscount implements DiscountStrategy {
     private final double RATE = 0.3;
-    private Product product;
+
     
-    public HolidayDiscount(Product product){
-        this.product = product;
-    }
     
     @Override
-    public double calculateDiscount(){
-        return this.product.getPrice() * this.RATE;
+    public double calculateDiscount(Product product){
+        return product.getPrice() * this.RATE;
         
     }
     
-    public double getDiscountPrice(){
-        return  this.product.getPrice() - this.calculateDiscount();
+    public double getDiscountedPrice(Product product){
+        return product.getPrice() - this.calculateDiscount(product);
     }
     
     

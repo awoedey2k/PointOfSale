@@ -9,6 +9,6 @@ package pointofsale;
  * @author asmith86
  */
 public interface DiscountStrategy {
-    double calculateDiscount();
+    double calculateDiscount(Product product);
     
 }
