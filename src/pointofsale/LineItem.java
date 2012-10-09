@@ -44,6 +44,14 @@ public class LineItem {
         return this.product.getPrice() * this.quantity;
     }
     
+    public String getLineItemString(){
+        String itemString;
+        itemString = this.product.getName() + " " + this.product.getProductID() + " " +
+                this.product.getPrice() + " " + this.getQuantity() + " " + this.calculateSubTotal();
+        return itemString;
+        
+    }
+    
     
     
     
